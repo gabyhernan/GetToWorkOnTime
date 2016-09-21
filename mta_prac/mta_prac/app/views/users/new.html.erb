@@ -1,0 +1,49 @@
+<%= form_for(user) do |f| %>
+
+  <div class="field">
+    <%= f.label :full_name %>
+    <%= f.text_field :full_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.text_field :password%>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :train_lines %>
+    <%= f.text_field :train_lines %>
+  </div>
+
+   <div class="field">
+    <%= f.label :commute_time %>
+    <%= f.text_field :commute_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :schedule %>
+    <%= f.text_field :schedule %>
+  </div>
+
+   <div class="field">
+    <%= f.label :zipcode %>
+    <%= f.text_field :zipcode %>
+  </div>
+
+
+  <div class="actions">
+
+  <%= submit_tag "Submit", class:"waves-effect waves- btn" %>
+
+  </div>
+<% end %>

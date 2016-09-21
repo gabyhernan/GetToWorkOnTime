@@ -1,0 +1,18 @@
+<h1> Get to Work on Time </h1>
+
+
+
+<div class="sign-in">
+  <%= form_tag '/users/signin', method: 'post' do %>
+    <div>
+    <%= label_tag :email, 'email' %>
+    <%= text_field_tag :email, params[:email] %><br><br>
+    <%= label_tag :password, 'password' %>
+    <%= password_field_tag :password, params[:password_hash] %><br><br>
+    <%= submit_tag "Login", class:"waves-effect waves- btn" %>
+  <%end%>
+</div>
+
+<br><br>
+
+<div class="member">Not a member? <a href="/users/new">Sign Up!</a></div>
