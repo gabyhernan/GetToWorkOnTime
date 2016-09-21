@@ -1,5 +1,7 @@
-<%= form_for(user) do |f| %>
+<h1> Create a new Account </h1>
 
+<%= form_for (@user) do |f| %>
+  <!-- <%= #render :partial => 'shared/error_messages' %> -->
   <div class="field">
     <%= f.label :full_name %>
     <%= f.text_field :full_name %>
@@ -7,12 +9,12 @@
 
   <div class="field">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.email_field :email , placeholder:"Enter email" %>
   </div>
 
   <div class="field">
     <%= f.label :password %>
-    <%= f.text_field :password%>
+    <%= f.password_field :password, placeholder:"Enter Password" %>
   </div>
 
   <div class="field">
@@ -42,8 +44,8 @@
 
 
   <div class="actions">
-
-  <%= submit_tag "Submit", class:"waves-effect waves- btn" %>
-
-  </div>
+  <%= f.submit "Submit", class:"waves-effect waves- btn" %>
 <% end %>
+  </div>
+
+<%= link_to "Back", root_path, class: "waves-effect waves- btn white-text" %>
