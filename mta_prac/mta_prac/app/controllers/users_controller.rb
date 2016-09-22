@@ -16,12 +16,12 @@ def new
 end
 
 def create
-   @user = User.new(user_params)
-  user = User.create user_params
+
+   user = User.create user_params
   user.password = params[:password_digest]
-    @user.save!
+    #@user.save!
     flash[:sucess] = "Welcome"
-  redirect_to 'index'
+  redirect_to '/index'
 
   #@user.password = params[:password]
   # if @user.save!
