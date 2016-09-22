@@ -1,9 +1,9 @@
 class UsersController < ApplicationController
 
-  # ATTRIBUTE_WHITELIST =  [:email, :password, :full_name, :phone_number, :train_lines, :commute_time, :schedule, :zipcode]
+
 
 def index
-  #@user = User.find(params[:id])
+  @user = User.find_by_id session[:user_id]
 end
 
 def show
@@ -19,7 +19,8 @@ def create
 
    user = User.create user_params
   user.password = params[:password_digest]
-    #@user.save!
+  session[:user_id] = user.id
+    #@user.save!/
     flash[:sucess] = "Welcome"
   redirect_to '/index'
 

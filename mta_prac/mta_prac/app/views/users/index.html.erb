@@ -1,1 +1,16 @@
-<h1> This will be User Index page of the site </h1>
+<h1> Welcome! <%= @user.full_name %></h1>
+<h1> Get To Work on Time </h1>
+
+
+
+<ul>
+ <li> Email: <%= @user.email %></li>
+
+ <li> Your schedule <%= @user.schedule %> </li>
+
+ <li> Train Lines  <%= @user.train_lines %> </li>
+
+ <li> Your commute time: <%= @user.commute_time %> </li>
+</ul>
+
+<%= link_to 'Sign Out', '/signin' , method: :get,  class:"waves-effect waves- btn white-text" %>
