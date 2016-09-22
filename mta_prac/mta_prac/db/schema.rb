@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160920232758) do
+ActiveRecord::Schema.define(version: 20160922021826) do
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",        null: false
-    t.string   "password",     null: false
+    t.string   "email",                      null: false
     t.string   "full_name"
-    t.integer  "phone_number"
+    t.integer  "phone_number",    limit: 10
     t.string   "train_lines"
     t.integer  "commute_time"
     t.text     "schedule"
-    t.integer  "zipcode"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "zipcode",         limit: 5
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "password_digest"
   end
 
 end

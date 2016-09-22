@@ -1,7 +1,7 @@
 <h1> Create a new Account </h1>
 
 <%= form_for (@user) do |f| %>
-  <!-- <%= #render :partial => 'shared/error_messages' %> -->
+
   <div class="field">
     <%= f.label :full_name %>
     <%= f.text_field :full_name %>
@@ -13,8 +13,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password, placeholder:"Enter Password" %>
+    <%= f.label :password_digest %>
+    <%= f.password_field :password_digest, placeholder:"Enter Password" %>
   </div>
 
   <div class="field">
@@ -44,7 +44,8 @@
 
 
   <div class="actions">
-  <%= f.submit "Submit", class:"waves-effect waves- btn" %>
+ <%= submit_tag "Submit", class:"waves-effect waves- btn" %>
+ <
 <% end %>
   </div>
 
