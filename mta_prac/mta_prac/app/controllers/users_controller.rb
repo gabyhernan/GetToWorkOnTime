@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
 
 def index
-  @user = User.all
+  @user = User.find_by_id session[:user_id]
 end
 
 def show
@@ -19,6 +19,7 @@ def create
 
    user = User.create user_params
   user.password = params[:password_digest]
+  session[:user_id] = user.id
     #@user.save!/
     flash[:sucess] = "Welcome"
   redirect_to '/index'
