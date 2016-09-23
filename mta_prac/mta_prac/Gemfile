@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
+gem 'httparty'
 gem 'bcrypt'
 gem 'faker'
 gem 'pry'
 gem 'materialize-sass'
 gem 'twilio-ruby'
-gem 'recurring_select'
-
-
+#gem 'recurring_select'
+gem 'concurrent-ruby', require: 'concurrent'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
