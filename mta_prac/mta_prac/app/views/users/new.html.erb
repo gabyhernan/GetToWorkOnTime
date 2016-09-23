@@ -13,7 +13,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_digest %>
+    <%= f.label :password %>
     <%= f.password_field :password_digest, placeholder:"Enter Password" %>
   </div>
 
@@ -33,8 +33,38 @@
   </div>
 
   <div class="field">
-    <%= f.label :schedule %>
-    <%= f.text_field :schedule %>
+    <%= f.label :monday %>
+    <%= f.time_field :monday %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tuesday %>
+    <%= f.time_field :tuesday %>
+  </div>
+
+<div class="field">
+    <%= f.label :wednesday %>
+    <%= f.time_field :wednesday %>
+  </div>
+
+  <div class="field">
+    <%= f.label :thursday %>
+    <%= f.time_field :thursday %>
+  </div>
+
+   <div class="field">
+    <%= f.label :friday %>
+    <%= f.time_field :friday %>
+  </div>
+
+ <div class="field">
+    <%= f.label :saturday %>
+    <%= f.time_field :saturday %>
+  </div>
+
+ <div class="field">
+    <%= f.label :sunday %>
+    <%= f.time_field :sunday %>
   </div>
 
    <div class="field">
@@ -45,7 +75,7 @@
 
   <div class="actions">
  <%= submit_tag "Submit", class:"waves-effect waves- btn" %>
- <
+
 <% end %>
   </div>
 

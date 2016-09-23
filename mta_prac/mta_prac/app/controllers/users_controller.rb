@@ -36,7 +36,8 @@ end
 private
 # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :password_digest, :full_name, :phone_number, :train_lines, :commute_time, :schedule, :zipcode)
+      params.require(:user).permit(:email, :password_digest, :full_name, :phone_number, :train_lines, :commute_time, :zipcode,
+        :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :sunday)
     end
 
 end

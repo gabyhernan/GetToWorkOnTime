@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160922021826) do
+ActiveRecord::Schema.define(version: 20160923044256) do
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.string   "schedulable_type"
+    t.integer  "schedulable_id"
+    t.date     "date"
+    t.time     "time"
+    t.string   "rule"
+    t.string   "interval"
+    t.text     "day"
+    t.text     "day_of_week"
+    t.datetime "until"
+    t.integer  "count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                      null: false
@@ -18,11 +39,17 @@ ActiveRecord::Schema.define(version: 20160922021826) do
     t.integer  "phone_number",    limit: 10
     t.string   "train_lines"
     t.integer  "commute_time"
-    t.text     "schedule"
     t.integer  "zipcode",         limit: 5
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
     t.string   "password_digest"
+    t.string   "monday"
+    t.string   "tuesday"
+    t.string   "wednesday"
+    t.string   "thursday"
+    t.string   "friday"
+    t.string   "saturday"
+    t.string   "sunday"
   end
 
 end
