@@ -7,6 +7,7 @@ class ApplicationJob < ActiveJob::Base
   end
 
   def perform#(vars) Might be needed
+    HTTParty.get("http://mtastat.us/api/trains")
 
     #byebug #debugging
 
