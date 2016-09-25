@@ -1,0 +1,9 @@
+require "httparty"
+
+Class TrainApi
+   TRAIN_URL = 'http://mtastat.us/api/trains'
+
+   def train_info
+
+   end
+  end
