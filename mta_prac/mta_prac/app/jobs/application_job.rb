@@ -10,9 +10,15 @@ class ApplicationJob < ActiveJob::Base
 
 
  response = HTTParty.get("http://mtastat.us/api/trains")
- binding.pry
-  body = JSON.parse(response.body)
-  body.each do |line| puts line['name'] end
+ full_sanitizer = Rails::Html::FullSanitizer.new
+ no_tags  = full_sanitizer.sanitize(response)
+
+  body = JSON.parse(no_tags)
+  trains = body.each do |line|
+    puts line['name']
+    puts line['status']
+  end
+
 
   # data.each do |train|
   # puts train["name"]
@@ -21,7 +27,7 @@ class ApplicationJob < ActiveJob::Base
     #byebug #debugging
     # Do something later
     puts "Hello There "
-    puts body
+    puts trains
   end
 
 
