@@ -3,35 +3,39 @@ class ApplicationJob < ActiveJob::Base
 
   before_perform do #|variables| Might be needed
     # invoke another job at your time of choice
-    ApplicationJob.set(wait: 20.seconds).perform_later
+    ApplicationJob.set(wait: 60.seconds).perform_later
   end
 
   def perform(*args) #Might be needed
-
-
  response = HTTParty.get("http://mtastat.us/api/trains")
  full_sanitizer = Rails::Html::FullSanitizer.new
  no_tags  = full_sanitizer.sanitize(response)
 
   body = JSON.parse(no_tags)
+  train_change = []
+
   trains = body.each do |line|
-    puts line['name']
-    puts line['status']
+   #name = puts line['name']
+   #status = puts line['status']
+    if line['status'] != "all good."
+      train_change.push(line)
+    end
   end
 
-
-  # data.each do |train|
-  # puts train["name"]
-  # puts train["status"]
-  # end
+  train_change.each do |line|
+    @user = User.find_by(train_lines: line['name'])
+    puts @user
+end
+  puts trains.count
+  puts train_change.count
     #byebug #debugging
-    # Do something later
-    puts "Hello There "
-    puts trains
+   # Do something later
+
+   #@users = Users.all
+    #puts "Hello There "
+    #puts trains
+
   end
-
-
-
 end
 
 
