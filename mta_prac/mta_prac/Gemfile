@@ -6,6 +6,7 @@ gem 'faker'
 gem 'pry'
 gem 'materialize-sass'
 gem 'twilio-ruby'
+gem 'rails-html-sanitizer'
 #gem 'recurring_select'
 gem 'concurrent-ruby', require: 'concurrent'
 

@@ -1,10 +1,11 @@
-<h1> Create a new Account </h1>
+<div class="name"> Get to Work on Time </div>
+<h1> Almost there! Just fill this out  we will alert you with a text if there's a change on your train!</h1>
 
 <%= form_for (@user) do |f| %>
 
   <div class="field">
-    <%= f.label :full_name %>
-    <%= f.text_field :full_name %>
+    <%= f.label :name %>
+    <%= f.text_field :full_name , placeholder:"First & Last Name" %>
   </div>
 
   <div class="field">
@@ -19,17 +20,17 @@
 
   <div class="field">
     <%= f.label :phone_number %>
-    <%= f.text_field :phone_number %>
+    <%= f.text_field :phone_number , placeholder:"Enter number with no dashes" %>
   </div>
 
   <div class="field">
     <%= f.label :train_lines %>
-    <%= f.text_field :train_lines %>
+    <%= f.text_field :train_lines, placeholder:" EXAMPLE: G L 7 " %>
   </div>
 
    <div class="field">
     <%= f.label :commute_time %>
-    <%= f.text_field :commute_time %>
+    <%= f.text_field :commute_time, placeholder:"EXAMPLE: 60" %>
   </div>
 
   <div class="field">
@@ -69,7 +70,7 @@
 
    <div class="field">
     <%= f.label :zipcode %>
-    <%= f.text_field :zipcode %>
+    <%= f.text_field :zipcode , place:"Enter your zip code" %>
   </div>
 
 
