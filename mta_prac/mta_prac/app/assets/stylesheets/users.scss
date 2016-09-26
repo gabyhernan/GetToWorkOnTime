@@ -3,9 +3,33 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.background {
+body {
   height: 100%;
   width: 100%;
+  margin: 0;
   background-size: cover;
   background: url(https://source.unsplash.com/category/buildings/1600x1200/?new+york);
+  color: white;
+  font-family: 'Helvectica',sans-serif;
+  padding: 10px
+
+}
+
+div {
+  padding: 10px
+}
+
+.member {
+  font-size: 30px;
+
+}
+
+.name {
+  text-align: center;
+  font-size: 94px;
+}
+
+.slogan {
+  text-align: center;
+  font-size: 36px;
 }
