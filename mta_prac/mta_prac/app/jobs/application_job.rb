@@ -23,9 +23,17 @@ class ApplicationJob < ActiveJob::Base
   end
 
   train_change.each do |line|
-    @user = User.find_by(train_lines: line['name'])
-    puts @user
+    # time fixin
+    @user = User.where("train_lines LIKE ?  AND  #{Time.now.strftime("%A").downcase} != ''
+      AND strftime('%s',#{Time.now.strftime("%A").downcase}) < strftime('%s','09:05')"
+       ,'%'+line['name']+'%' ).all
+
+   @user.each do |sheep|
+    puts sheep['id'].to_s + sheep['phone_number'].to_s + line['name'] + line['status']
+    #call twilio in this loop
+  end
 end
+
   puts trains.count
   puts train_change.count
     #byebug #debugging
