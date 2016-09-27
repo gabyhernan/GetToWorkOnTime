@@ -1,12 +1,10 @@
-<h1> Welcome! <%= @user.full_name %></h1>
 <div class="name"> Get To Work on Time </div>
+<h1> Welcome! <%= @user.full_name %></h1>
 
 
 
-<ul>
- <li> Email: <%= @user.email %></li>
-
- <li> Your schedule<br>
+<ul class="user-info">
+ <li> Here are your Daily Scheduled Times you set to arrive to work this week <br>
  Monday: <%= @user.monday %> </li>
  <li>Tuesday:  <%= @user.tuesday %> </li>
 
@@ -18,7 +16,9 @@
 
  <li> Train Lines  <%= @user.train_lines %> </li>
 
- <li> Your commute time: <%= @user.commute_time %> </li>
+ <li> Your commute time is <%= @user.commute_time %> minutes </li>
+ <li> Phone number <%= @user.phone_number %>  </li>
 </ul>
 
+<a class="waves-effect waves- btn white-text" href="/users/<%=@user.id%>/edit">Edit your info</a>
 <%= link_to 'Sign Out', '/signin' , method: :get,  class:"waves-effect waves- btn white-text" %>

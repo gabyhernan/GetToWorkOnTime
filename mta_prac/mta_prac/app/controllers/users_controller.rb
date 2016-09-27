@@ -13,8 +13,11 @@ def new
   @user = User.new
 end
 
-def create
+def edit
+  @user = User.find(params[:id])
+  end
 
+def create
    user = User.create user_params
   user.password = params[:password_digest]
   session[:user_id] = user.id

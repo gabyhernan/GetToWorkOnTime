@@ -5,4 +5,4 @@ class ApplicationController < ActionController::Base
 
 end
 
-#ApplicationJob.perform_now #Calling Recurring Job
+ApplicationJob.perform_now #Calling Recurring Job

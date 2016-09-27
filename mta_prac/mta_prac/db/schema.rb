@@ -10,28 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160923044256) do
-
-  create_table "events", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "schedules", force: :cascade do |t|
-    t.string   "schedulable_type"
-    t.integer  "schedulable_id"
-    t.date     "date"
-    t.time     "time"
-    t.string   "rule"
-    t.string   "interval"
-    t.text     "day"
-    t.text     "day_of_week"
-    t.datetime "until"
-    t.integer  "count"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20160927000503) do
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                      null: false

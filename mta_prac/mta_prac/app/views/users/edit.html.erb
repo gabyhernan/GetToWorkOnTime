@@ -1,78 +1,82 @@
-<div class="name"> Get to Work on Time </div>
-<h1> Almost there! Just fill this out!</h1>
-
+<h1> Edit your info </h1>
 <div class="signup">
 <%= form_for (@user) do |f| %>
 
   <div class="field">
-    <%= f.label :name , class:"label" %>
+    <%= f.label :name %>
     <%= f.text_field :full_name , placeholder:"First & Last Name" %>
   </div>
 
   <div class="field">
-    <%= f.label :email , class:"label"%>
+    <%= f.label :email %>
     <%= f.email_field :email , placeholder:"Enter email" %>
   </div>
 
   <div class="field">
-    <%= f.label :password , class:"label" %>
+    <%= f.label :password %>
     <%= f.password_field :password_digest, placeholder:"Enter Password" %>
   </div>
 
   <div class="field">
-    <%= f.label :phone_number, class:"label" %>
+    <%= f.label :phone_number %>
     <%= f.text_field :phone_number , placeholder:"Enter number with no dashes" %>
   </div>
 
   <div class="field">
-    <%= f.label :train_lines , class:"label"%>
+    <%= f.label :train_lines %>
     <%= f.text_field :train_lines, placeholder:" EXAMPLE: G L 7 " %>
   </div>
 
    <div class="field">
-    <%= f.label :commute_time , class:"label" %>
+    <%= f.label :commute_time %>
     <%= f.text_field :commute_time, placeholder:"EXAMPLE: 60" %>
   </div>
 
   <div class="field">
-    <%= f.label :monday , class:"label"%>
+    <%= f.label :monday %>
     <%= f.time_field :monday %>
   </div>
 
   <div class="field">
-    <%= f.label :tuesday ,class:"label" %>
+    <%= f.label :tuesday %>
     <%= f.time_field :tuesday %>
   </div>
 
 <div class="field">
-    <%= f.label :wednesday , class:"label" %>
+    <%= f.label :wednesday %>
     <%= f.time_field :wednesday %>
   </div>
 
   <div class="field">
-    <%= f.label :thursday , class:"label" %>
+    <%= f.label :thursday %>
     <%= f.time_field :thursday %>
   </div>
 
    <div class="field">
-    <%= f.label :friday , class:"label" %>
+    <%= f.label :friday %>
     <%= f.time_field :friday %>
   </div>
 
  <div class="field">
-    <%= f.label :saturday , class:"label" %>
+    <%= f.label :saturday %>
     <%= f.time_field :saturday %>
   </div>
 
  <div class="field">
-    <%= f.label :sunday , class:"label" %>
+    <%= f.label :sunday %>
     <%= f.time_field :sunday %>
   </div>
+
+   <div class="field">
+    <%= f.label :zipcode %>
+    <%= f.text_field :zipcode , place:"Enter your zip code" %>
+  </div>
+
 
 
  <%= submit_tag "Submit", class:"waves-effect waves- btn" %>
 
 <% end %>
-  </div>
+</div>
 
-<%= link_to "Back", root_path, class: "waves-effect waves- btn white-text" %>
+<%= link_to 'Back', root_path , class:"waves-effect waves- btn white-text" %>

@@ -4,16 +4,21 @@
 
 
 body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
+
   background-size: cover;
   background: url(https://source.unsplash.com/category/buildings/1600x1200/?new+york);
   color: white;
   font-family: 'Helvectica',sans-serif;
-  padding: 10px
+  padding: 10px;
+  text-align: center;
 
 }
+
+.label {
+  font-size: 24px;
+  color: white;
+}
+
 
 div {
   padding: 10px
@@ -32,4 +37,20 @@ div {
 .slogan {
   text-align: center;
   font-size: 36px;
+}
+
+.sign-in{
+  width: 700px;
+  margin-left: 350px;
+}
+
+.signup {
+  width: 631px;
+  margin-left: 378px;
+}
+
+.user-info {
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
 }
