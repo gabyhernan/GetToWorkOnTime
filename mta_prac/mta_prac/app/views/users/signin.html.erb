@@ -6,18 +6,17 @@
   Convenience on a click </div>
 
 
-<div class="sign-in">
-  <%= form_tag '/users/signin', method: 'post' do %>
-    <div>
-    <%= label_tag :email, 'email' %>
+    <div class="sign-in">
+  <%= form_tag '/users/signin', class:"signin", method: 'post' do %>
+    <%= label_tag :email, 'Email', class:"label" %>
     <%= text_field_tag :email, params[:email] %><br><br>
-    <%= label_tag :password, 'password' %>
+    <%= label_tag :password, 'Password', class:"label" %>
     <%= password_field_tag :password, params[:password_hash] %><br><br>
-    <%= submit_tag "Login", class:"waves-effect waves- btn" %>
+    <%= submit_tag "Sign In", class:"waves-effect waves- btn" %>
   <%end%>
-
-
 </div>
+
+
 
 <br><br>
 
