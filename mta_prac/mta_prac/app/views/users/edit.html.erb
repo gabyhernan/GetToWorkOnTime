@@ -1,5 +1,5 @@
 <h1> Edit your info </h1>
-
+<div class="signup">
 <%= form_for (@user) do |f| %>
 
   <div class="field">
@@ -73,10 +73,10 @@
   </div>
 
 
-  <div class="actions">
+
  <%= submit_tag "Submit", class:"waves-effect waves- btn" %>
 
 <% end %>
-
+</div>
 
 <%= link_to 'Back', root_path , class:"waves-effect waves- btn white-text" %>
