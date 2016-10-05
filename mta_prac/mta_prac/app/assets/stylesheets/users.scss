@@ -9,14 +9,18 @@ body {
   background: url(https://source.unsplash.com/category/buildings/1600x1200/?new+york);
   color: white;
   font-family: 'Helvectica',sans-serif;
-  padding: 10px;
   text-align: center;
 
 }
 
 .label {
-  font-size: 24px;
+  font-size: 18px;
   color: white;
+}
+
+.container {
+  padding:10px
+
 }
 
 
@@ -25,32 +29,50 @@ div {
 }
 
 .member {
-  font-size: 30px;
+  font-size: 26px;
+  font-family: 'Lobster', cursive;
 
 }
 
 .name {
-  text-align: center;
-  font-size: 94px;
+  // text-align: center;
+  font-size: 64px;
+  font-family: 'Rock Salt', cursive;
 }
 
 .slogan {
-  text-align: center;
-  font-size: 36px;
+  // text-align: center;
+  font-size: 26px;
+
 }
 
 .sign-in{
-  width: 700px;
-  margin-left: 350px;
+  // width: px;
+  display: inline-flex;
 }
 
 .signup {
-  width: 631px;
-  margin-left: 378px;
+margin-left: auto;
+margin-right: auto;
+  display: inline-flex;
+}
+
+div.field{
+  height:75px;
+}
+
+input.waves-effect.waves-.btn{
+  margin: 23px;
 }
 
 .user-info {
-  text-align: center;
-  font-size: 28px;
+  // text-align: center;
+  font-size: 22px;
   padding: 20px;
+  font-family: 'Roboto', cursive;
+}
+
+.fullname{
+  font-size: 30px;
+  font-family: 'Pacifico', cursive;
 }
