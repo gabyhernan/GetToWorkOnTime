@@ -1,5 +1,5 @@
 <div class="name"> Get to Work on Time </div>
-<h1> Almost there! Just fill this out!</h1>
+
 
 <div class="signup">
 <%= form_for (@user) do |f| %>
@@ -65,14 +65,15 @@
   </div>
 
  <div class="field">
-    <%= f.label :sunday , class:"label" %>
+    <%= f.label :sunday , class:"label" , :size => 6 %>
     <%= f.time_field :sunday %>
   </div>
 
 
- <%= submit_tag "Submit", class:"waves-effect waves- btn" %>
+ <%= submit_tag "Submit", class:"btn waves-effect grey darken-" %>
+ <%= link_to "Back", root_path, class: "btn waves-effect grey darken-" %>
 
 <% end %>
   </div>
 
-<%= link_to "Back", root_path, class: "waves-effect waves- btn white-text" %>
+

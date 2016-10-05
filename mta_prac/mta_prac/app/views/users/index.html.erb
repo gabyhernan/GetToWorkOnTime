@@ -1,7 +1,5 @@
-<div class="name"> Get To Work on Time </div>
-<h1> Welcome! <%= @user.full_name %></h1>
-
-
+<div class="container">
+<div class="fullname"> Welcome! <%= @user.full_name %></div>
 
 <ul class="user-info">
  <li> Here are your Daily Scheduled Times you set to arrive to work this week <br>
@@ -20,5 +18,6 @@
  <li> Phone number <%= @user.phone_number %>  </li>
 </ul>
 
-<a class="waves-effect waves- btn white-text" href="/users/<%=@user.id%>/edit">Edit your info</a>
-<%= link_to 'Sign Out', '/signin' , method: :get,  class:"waves-effect waves- btn white-text" %>
+<a class="btn waves-effect grey darken-" href="/users/<%=@user.id%>/edit">Edit your info</a>
+<%= link_to 'Sign Out', '/signin' , method: :get,  class:"btn waves-effect grey darken-" %>
+</div>
